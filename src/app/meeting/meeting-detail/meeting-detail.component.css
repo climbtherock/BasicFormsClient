@@ -1,0 +1,23 @@
+.wrapper {
+    margin: 10px;
+}
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.test {
+    width: 100%;
+} */
+
+.plus-circle {
+  color: teal;
+  padding-right: 5px;
+}
+
+.add-agenda-item {
+  outline: none;
+}

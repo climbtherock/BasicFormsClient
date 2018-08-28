@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <mat-form-field class="test">
+    <input matInput placeholder="Meeting Objective">
+  </mat-form-field>
+
+
+  <div *ngFor="let item of agendaItems">{{item}}</div>
+
+  <div *ngIf="addItemActive">
+    <mat-form-field class="test">
+      <input [formControl]="agendaItemControl" matInput placeholder="Description">
+    </mat-form-field>
+    <button color="primary" (click)="saveAgendaItem()" mat-button>Save</button>
+  </div>
+
+  <div (click)="addItemActive = !addItemActive"
+       *ngIf="!addItemActive"
+       class="add-agenda-item">
+    <fa-icon class="plus-circle" [icon]="faPlusCircle" (click)="addAgendaItem()">
+    </fa-icon>
+    <span>Add Agenda Item</span>
+  </div>
+
+  <!-- <div class="footer">
+    <mat-form-field>
+      <textarea matInput placeholder="Notes"></textarea>
+    </mat-form-field>
+  </div> -->
+</div>
